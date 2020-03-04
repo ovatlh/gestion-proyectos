@@ -1,0 +1,1977 @@
+@font-face
+{
+    font-family: 'Roboto Bold';
+    src: url(~/files/fonts/roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: 'Mermaid';
+    src: url(~/files/fonts/mermaid/Mermaid1001.ttf);
+}
+@font-face {
+    font-family: 'Chapaza';
+    src: url(~/files/fonts/chapaza/Chapaza.ttf);
+}
+@font-face {
+    font-family: 'Mank Sans Medium';
+    src: url(~/files/fonts/mank_sans/MankSans-Medium.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    translate: no;
+    background-color: #F5F5F5;
+}
+
+.encabezado {
+    width: 100%;
+    height: 100px;
+    background-color: #011221;
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+}
+
+    .encabezado a img {
+        width: 90px;
+        height: 90px;
+        float: left;
+        margin: 5px 20px;
+    }
+
+    .encabezado div {
+        height: 100%;
+    }
+
+    .encabezado h1 {
+        width: 100%;
+        height: 50px;
+        font-family: 'Franklin Gothic';
+        font-size: 29px;
+        font-weight: 400;
+        line-height: 50px;
+        color: #F5F5F5;
+    }
+
+    .encabezado h2 {
+        width: 100%;
+        height: 40px;
+        font-family: 'Mermaid';
+        font-size: 25px;
+        letter-spacing: 1.5px;
+        line-height: 40px;
+        color: #AFD3F7;
+    }
+
+
+/* -------------------------------------------- AREAS DE CONOCIMIENTO -------------------------------------------- */
+/* CREATE - UPDATE Área de Conocimiento */
+.agregar-editarArea {
+    width: 65%;
+    border-radius: 8px;
+    margin: 30px auto;
+    background-color: #C2D6E8;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+}
+
+    .agregar-editarArea h3 {
+        width: 90%;
+        font-family: 'Chapaza';
+        font-size: 17px;
+        padding: 10px 15px;
+        margin: 0px auto;
+    }
+
+    .agregar-editarArea hr {
+        width: 90%;
+        height: 2px;
+        color: #082B49;
+        margin: 0px auto;
+        background-color: #082B49;
+    }
+
+    .agregar-editarArea form {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+        .agregar-editarArea form input {
+            width: calc(100% - 10px);
+            height: 30px;
+            font-family: 'Calibri Light';
+            font-size: 15px;
+            color: #141414;
+            border: #8B7D6B 1px solid;
+            border-radius: 5px;
+            padding: 0px 5px;
+            margin: 0px auto;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+::-webkit-input-placeholder {
+    color: #8B7D6B;
+    border-radius: 5px;
+}
+
+::-moz-placeholder {
+    color: #8B7D6B;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: #8B7D6B;
+    border-radius: 5px;
+}
+
+.agregar-editarArea form input:nth-child(2n), .agregar-editarArea form a {
+    width: 100px;
+    height: 30px;
+    font-family: 'Tahoma';
+    font-size: 14px;
+    color: #F5F5F5;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    background-color: #152942;
+}
+
+    .agregar-editarArea form input:nth-child(2n):hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+.agregar-editarArea form a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+    .agregar-editarArea form a:hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+.errorMessage {
+    width: 90%;
+    font-family: 'Calibri';
+    font-size: 14px;
+    text-align: center;
+    color: #FF0000;
+    clear: both;
+    display: inline-block;
+    margin: 15px 5%;
+}
+
+
+/* READ Áreas de conocimiento */
+.areasConocimiento {
+    width: 90%;
+    margin: 20px auto;
+}
+
+    .areasConocimiento h3 {
+        font-family: 'Roboto Bold';
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 5px 0px;
+    }
+
+.buscar-agregarArea {
+    width: 90%;
+    margin: 10px auto;
+}
+
+    .buscar-agregarArea form {
+        width: 50%;
+        float: left;
+    }
+
+        .buscar-agregarArea form input {
+            width: 340px;
+            height: 30px;
+            border: 0px;
+            float: left;
+            padding: 0px 5px;
+        }
+
+        .buscar-agregarArea form button {
+            width: 100px;
+            height: 30px;
+            cursor: pointer;
+            border: 0px;
+            border-radius: 0px 10px 10px 0px;
+            background-color: #100C3E;
+        }
+
+            .buscar-agregarArea form button:hover {
+                background-color: #0F4C81;
+            }
+
+            .buscar-agregarArea form button img {
+                width: 15px;
+                height: 15px;
+            }
+
+            .buscar-agregarArea form button span {
+                height: 20px;
+                font-family: 'Segoe UI';
+                font-size: 15px;
+                color: #F5F5F5;
+                line-height: 20px;
+            }
+
+    .buscar-agregarArea a {
+        height: 30px;
+        font-family: 'Segoe UI';
+        font-size: 15px;
+        color: #F5F5F5;
+        text-decoration: none;
+        line-height: 30px;
+        border-radius: 7px;
+        float: right;
+        padding: 5px;
+        background-color: #100C3E;
+        -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+    }
+
+        .buscar-agregarArea a:hover {
+            background-color: #0F4C81;
+        }
+
+        .buscar-agregarArea a img {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 5px 5px 5px 0px;
+        }
+
+.areas {
+    width: 90%;
+    clear: both;
+    display: block;
+    margin: 80px auto;
+}
+
+    .areas ul {
+        list-style: none;
+    }
+
+        .areas ul li {
+            min-height: 30px;
+            border-left-color: #100C3E;
+            border-left-style: solid;
+            border-left-width: 8px;
+            padding: 5px;
+            margin-bottom: 20px;
+            background-color: #FFFFFF;
+            -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+            box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+            transform: translateX(0px);
+            transition-duration: 0.3s;
+        }
+
+            .areas ul li:nth-child(2n) {
+                background-color: #C2D6E8;
+            }
+
+            .areas ul li:hover {
+                transform: translateX(+5px);
+                transition-duration: 0.3s;
+            }
+
+            .areas ul li .nombreArea {
+                width: 90%;
+                font-family: 'Calibri Light';
+                font-size: 16px;
+                font-weight: bold;
+                color: #011221;
+                line-height: 30px;
+                display: inline-block;
+            }
+
+            .areas ul li a img {
+                width: 20px;
+                height: 20px;
+                float: right;
+                margin: 5px;
+            }
+
+
+/* DELETE Área de conocimiento */
+.eliminarArea {
+    width: 400px;
+    height: 150px;
+    margin: 50px auto;
+    border-left-width: 8px;
+    border-left-color: #030A16;
+    border-left-style: solid;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #C2D6E8;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+}
+
+    .eliminarArea p {
+        width: (100% - 30px);
+        height: 70px;
+        font-family: 'Bahnschrift';
+        font-size: 15px;
+        display: inline-block;
+        margin: 20px 15px;
+    }
+
+    .eliminarArea input, .eliminarArea a {
+        width: 100px;
+        height: 30px;
+        font-family: 'Calibri';
+        font-size: 14px;
+        border: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #F5F5F5;
+        background-color: #152942;
+        float: right;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+    .eliminarArea a {
+        text-decoration: none;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .eliminarArea input:hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+    .eliminarArea a:hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+
+
+/* -------------------------------------------- CARRERAS -------------------------------------------- */
+/* READ Carreras */
+.carreras {
+    width: 90%;
+    margin: 20px auto;
+}
+
+    .carreras h3 {
+        font-family: 'Roboto Bold';
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 5px 0px;
+    }
+
+    .carreras > a {
+        height: 30px;
+        font-family: 'Segoe UI';
+        font-size: 15px;
+        color: #F5F5F5;
+        text-decoration: none;
+        line-height: 30px;
+        border-radius: 7px;
+        float: left;
+        padding: 5px 10px;
+        margin: 15px 0px 30px 0px;
+        background-color: #100C3E;
+        -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+    }
+
+        .carreras > a img {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 5px 5px 5px 0px;
+        }
+
+        .carreras > a:hover {
+            background-color: #0F4C81;
+        }
+
+.listaCarreras {
+    width: 90%;
+    clear: both;
+    display: block;
+    margin: 30px auto;
+}
+
+.tablaCarreras li {
+    border-radius: 3px;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+}
+
+.tablaCarreras-header {
+    height: 30px;
+    font-family: 'Mank Sans Medium';
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    background-color: #C2D6E8;
+}
+
+.tablaCarreras-row {
+    height: 25px;
+    font-family: 'Calibri Light';
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+
+.tablaCarreras .col-1 {
+    font-weight: bold;
+    flex-basis: 10%;
+}
+
+.tablaCarreras .col-2 {
+    flex-basis: 80%;
+}
+
+.tablaCarreras .col-3 {
+    flex-basis: 10%;
+}
+
+    .tablaCarreras .col-3 a img {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        float: right;
+    }
+
+
+/* CREATE - UPDATE Carrera */
+.agregar-editarCarrera {
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.5);
+}
+
+    .agregar-editarCarrera h3 {
+        width: 95%;
+        font-family: 'Chapaza';
+        font-size: 17px;
+        display: inline-block;
+        margin: 10px 2.5% 5px 2.5%;
+    }
+
+    .agregar-editarCarrera hr {
+        width: 95%;
+        height: 2px;
+        color: #082B49;
+        background-color: #082B49;
+        margin: 0px 2.5% 10px 2.5%;
+    }
+
+    .agregar-editarCarrera form {
+        width: 95%;
+        margin: 0px 2.5%;
+        margin-bottom: 10px;
+    }
+
+        .agregar-editarCarrera form input {
+            width: 95%;
+            height: 30px;
+            font-family: 'Calibri Light';
+            font-size: 15px;
+            color: #141414;
+            border: #8B7D6B 1px solid;
+            border-radius: 5px;
+            display: block;
+            padding: 0px 5px;
+            margin: 0px 2.2%;
+            margin-bottom: 10px;
+        }
+
+            .agregar-editarCarrera form input:nth-child(3n), .agregar-editarCarrera form a {
+                width: 100px;
+                height: 30px;
+                font-family: 'Tahoma';
+                font-size: 14px;
+                color: #F5F5F5;
+                line-height: 30px;
+                border: 0px;
+                border-radius: 5px;
+                cursor: pointer;
+                float: right;
+                background-color: #152942;
+            }
+
+        .agregar-editarCarrera form a {
+            text-decoration: none;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        .agregar-editarCarrera form input:nth-child(3n):hover {
+            color: #141414;
+            background-color: #2C5F8C;
+        }
+
+        .agregar-editarCarrera form a:hover {
+            color: #141414;
+            background-color: #2C5F8C;
+        }
+
+.errorMessage {
+    width: 90%;
+    font-family: 'Calibri';
+    font-size: 14px;
+    text-align: center;
+    color: #FF0000;
+    clear: both;
+    display: inline-block;
+    margin: 15px 5%;
+}
+
+
+/* DELETE Carrera */
+.eliminarCarrera {
+    width: 30%;
+    height: 150px;
+    margin: 50px auto;
+    border-left-width: 8px;
+    border-left-color: #030A16;
+    border-left-style: solid;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #C2D6E8;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+}
+
+    .eliminarCarrera p {
+        width: (100% - 30px);
+        height: 70px;
+        font-family: 'Bahnschrift';
+        font-size: 15px;
+        display: block;
+        padding: 15px 0px 0px 0px;
+        margin: 0px 15px;
+        margin-bottom: 20px;
+    }
+
+    .eliminarCarrera input, .eliminarCarrera a {
+        width: 100px;
+        height: 30px;
+        font-family: 'Calibri';
+        font-size: 14px;
+        border: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #F5F5F5;
+        background-color: #152942;
+        float: right;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+    .eliminarCarrera a {
+        text-decoration: none;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .eliminarCarrera input:hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+    .eliminarCarrera a:hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+
+/* ------------------------------------------------- ROLES ------------------------------------------------- */
+/* READ Roles */
+.roles {
+    width: 80%;
+    margin: 20px auto;
+}
+
+    .roles h3 {
+        font-family: 'Roboto Bold';
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 5px 0px;
+    }
+
+    .roles > a {
+        height: 30px;
+        font-family: 'Segoe UI';
+        font-size: 15px;
+        color: #F5F5F5;
+        text-decoration: none;
+        line-height: 30px;
+        border-radius: 7px;
+        float: right;
+        padding: 5px 10px;
+        margin: 10px;
+        background-color: #100C3E;
+        -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+    }
+
+    .roles a:hover {
+        background-color: #0F4C81;
+    }
+
+    .roles a img {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 5px 5px 5px 0px;
+    }
+
+.listaRoles {
+    width: 90%;
+    clear: both;
+    display: block;
+    margin: 80px auto;
+}
+
+    .listaRoles ul {
+        list-style: none;
+    }
+
+        .listaRoles ul li {
+            min-height: 30px;
+            border-left-color: #2A4E69;
+            border-left-style: solid;
+            border-width: 8px;
+            padding: 5px;
+            margin-bottom: 20px;
+            background-color: #FFFFFF;
+            -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+            box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+            transform: translateX(0px);
+            transition-duration: 0.3s;
+        }
+
+            .listaRoles ul li:nth-child(2n) {
+                background-color: #E7EFF6;
+            }
+
+            .listaRoles ul li:hover {
+                transform: translateX(+5px);
+                transition-duration: 0.3s;
+            }
+
+            .listaRoles ul li .nombreRol {
+                width: 90%;
+                font-family: 'Calibri Light';
+                font-size: 16px;
+                font-weight: bold;
+                color: #011221;
+                line-height: 30px;
+                display: inline-block;
+            }
+
+            .listaRoles ul li a img {
+                width: 20px;
+                height: 20px;
+                float: right;
+                margin: 5px;
+            }
+
+
+/* CREATE - UPDATE Rol */
+.agregar-editarRol {
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 5px;
+    background-color: #E7EFF6;
+    -webkit-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.5);
+}
+
+    .agregar-editarRol h3 {
+        width: 95%;
+        font-family: 'Chapaza';
+        font-size: 17px;
+        display: inline-block;
+        margin: 10px 2.5% 5px 2.5%;
+    }
+
+    .agregar-editarRol hr {
+        width: 95%;
+        height: 2px;
+        color: #2A4E69;
+        background-color: #2A4E69;
+        margin: 0px 2.5% 10px 2.5%;
+    }
+
+    .agregar-editarRol form {
+        width: 95%;
+        margin: 0px 2.5%;
+        margin-bottom: 10px;
+    }
+
+        .agregar-editarRol form input {
+            width: 95%;
+            height: 30px;
+            font-family: 'Calibri Light';
+            font-size: 15px;
+            color: #141414;
+            border: #8B7D6B 1px solid;
+            border-radius: 5px;
+            display: block;
+            padding: 0px 5px;
+            margin: 0px auto;
+            margin-bottom: 10px;
+        }
+
+            .agregar-editarRol form input:nth-child(2n), .agregar-editarRol form a {
+                width: 100px;
+                height: 30px;
+                font-family: 'Tahoma';
+                font-size: 14px;
+                color: #F5F5F5;
+                line-height: 30px;
+                border: 0px;
+                border-radius: 5px;
+                cursor: pointer;
+                float: right;
+                background-color: #152942;
+            }
+
+        .agregar-editarRol form a {
+            text-decoration: none;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        .agregar-editarRol form input:nth-child(2n):hover {
+            color: #141414;
+            background-color: #2C5F8C;
+        }
+
+        .agregar-editarRol form a:hover {
+            color: #141414;
+            background-color: #2C5F8C;
+        }
+
+.errorMessage {
+    width: 90%;
+    font-family: 'Calibri';
+    font-size: 14px;
+    text-align: center;
+    color: #FF0000;
+    clear: both;
+    display: inline-block;
+    margin: 15px 5%;
+}
+
+
+/* DELETE Rol */
+.eliminarRol {
+    width: 30%;
+    height: 150px;
+    margin: 50px auto;
+    border-left-width: 8px;
+    border-left-color: #011221;
+    border-left-style: solid;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #E7EFF6;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+}
+
+    .eliminarRol p {
+        width: calc(100% - 30px);
+        height: 70px;
+        font-family: 'Bahnschrift';
+        font-size: 15px;
+        display: block;
+        padding: 15px 0px;
+        margin: 0px 15px;
+    }
+
+    .eliminarRol input:nth-child(1n), .eliminarRol a {
+        width: 100px;
+        height: 30px;
+        font-family: 'Calibri';
+        font-size: 14px;
+        border: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #F5F5F5;
+        background-color: #152942;
+        float: right;
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+
+    .eliminarRol a {
+        text-decoration: none;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .eliminarRol input:nth-child(1n):hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+    .eliminarRol a:hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+
+/* ------------------------------------------ TIPOS DE INVESTIGACION ------------------------------------------ */
+/* READ Tipos de investigación */
+.tiposInvestigacion {
+    width: 80%;
+    margin: 20px auto;
+}
+
+    .tiposInvestigacion h3 {
+        font-family: 'Roboto Bold';
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 5px 0px;
+    }
+
+    .tiposInvestigacion > a {
+        height: 30px;
+        font-family: 'Segoe UI';
+        font-size: 15px;
+        color: #F5F5F5;
+        text-decoration: none;
+        line-height: 30px;
+        border-radius: 7px;
+        float: right;
+        padding: 5px 10px;
+        margin: 10px;
+        background-color: #100C3E;
+        -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+    }
+
+    .tiposInvestigacion a img {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 5px 5px 5px 0px;
+    }
+
+    .tiposInvestigacion a:hover {
+        background-color: #0F4C81;
+    }
+
+.listaTiposInvestigaciones {
+    width: 90%;
+    clear: both;
+    display: block;
+    margin: 80px auto;
+}
+
+    .listaTiposInvestigaciones ul {
+        list-style: none;
+    }
+
+        .listaTiposInvestigaciones ul li {
+            min-height: 30px;
+            border-left-color: #0C1C47;
+            border-left-style: solid;
+            border-width: 8px;
+            padding: 5px;
+            margin-bottom: 20px;
+            background-color: #FFFFFF;
+            -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+            box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+            transform: translateX(0px);
+            transition-duration: 0.3s;
+        }
+
+            .listaTiposInvestigaciones ul li:nth-child(2n) {
+                background-color: #C5CFEA;
+            }
+
+            .listaTiposInvestigaciones ul li:hover {
+                transform: translateX(+5px);
+                transition-duration: 0.3s;
+            }
+
+            .listaTiposInvestigaciones ul li .nombreTipoInvestigacion {
+                width: 90%;
+                font-family: 'Calibri Light';
+                font-size: 16px;
+                font-weight: bold;
+                color: #011221;
+                line-height: 30px;
+                display: inline-block;
+            }
+
+            .listaTiposInvestigaciones ul li a img {
+                width: 20px;
+                height: 20px;
+                float: right;
+                margin: 5px;
+            }
+
+
+/* CREATE - UPDATE Tipo de investigación */
+.agregar-editarTipoInv {
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 5px;
+    background-color: #C5CFEA;
+    -webkit-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.5);
+}
+
+    .agregar-editarTipoInv h3 {
+        width: 95%;
+        font-family: 'Chapaza';
+        font-size: 17px;
+        display: inline-block;
+        margin: 10px 2.5% 5px 2.5%;
+    }
+
+    .agregar-editarTipoInv hr {
+        width: 95%;
+        height: 2px;
+        color: #2A4E69;
+        background-color: #2A4E69;
+        margin: 0px 2.5% 10px 2.5%;
+    }
+
+    .agregar-editarTipoInv form {
+        width: 95%;
+        margin: 0px 2.5%;
+        margin-bottom: 10px;
+    }
+
+        .agregar-editarTipoInv form input {
+            width: 95%;
+            height: 30px;
+            font-family: 'Calibri Light';
+            font-size: 15px;
+            color: #141414;
+            border: #8B7D6B 1px solid;
+            border-radius: 5px;
+            display: block;
+            padding: 0px 5px;
+            margin: 0px auto;
+            margin-bottom: 10px;
+        }
+
+            .agregar-editarTipoInv form input:nth-child(2n), .agregar-editarTipoInv form a {
+                width: 100px;
+                height: 30px;
+                font-family: 'Tahoma';
+                font-size: 14px;
+                color: #F5F5F5;
+                line-height: 30px;
+                border: 0px;
+                border-radius: 5px;
+                cursor: pointer;
+                float: right;
+                background-color: #152942;
+            }
+
+        .agregar-editarTipoInv form a {
+            text-decoration: none;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        .agregar-editarTipoInv form input:nth-child(2n):hover {
+            color: #141414;
+            background-color: #2C5F8C;
+        }
+
+        .agregar-editarTipoInv form a:hover {
+            color: #141414;
+            background-color: #2C5F8C;
+        }
+
+.errorMessage {
+    width: 90%;
+    font-family: 'Calibri';
+    font-size: 14px;
+    text-align: center;
+    color: #FF0000;
+    clear: both;
+    display: inline-block;
+    margin: 15px 5%;
+}
+
+
+/* DELETE Tipo de investigación */
+.eliminarTipoInv {
+    width: 30%;
+    height: 150px;
+    margin: 50px auto;
+    border-left-width: 8px;
+    border-left-color: #011221;
+    border-left-style: solid;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #C5CFEA;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+}
+
+    .eliminarTipoInv p {
+        width: calc(100% - 30px);
+        height: 70px;
+        font-family: 'Bahnschrift';
+        font-size: 15px;
+        display: block;
+        padding: 15px 0px;
+        margin: 0px 15px;
+    }
+
+    .eliminarTipoInv input:nth-child(1n), .eliminarTipoInv a {
+        width: 100px;
+        height: 30px;
+        font-family: 'Calibri';
+        font-size: 14px;
+        border: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #F5F5F5;
+        background-color: #152942;
+        float: right;
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+
+    .eliminarTipoInv a {
+        text-decoration: none;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .eliminarTipoInv input:nth-child(1n):hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+    .eliminarTipoInv a:hover {
+        color: #141414;
+        background-color: #2C5F8C;
+    }
+
+
+
+/* RESPONSIVE */
+@media (max-width:320px) {
+    .encabezado {
+        height: 90px;
+    }
+
+        .encabezado a img {
+            width: 80px;
+            height: 80px;
+            margin: 5px 10px;
+        }
+
+        .encabezado h1 {
+            height: 50px;
+            font-size: 15px;
+            line-height: 15px;
+            padding: 5px 0px;
+        }
+
+        .encabezado h2 {
+            height: 30px;
+            font-size: 14px;
+            line-height: 30px;
+        }
+
+
+    /* ------------------------------------------ AREAS DE CONOCIMIENTO ------------------------------------------ */
+    /* Create - Update Areas de conocimiento */
+    .agregar-editarArea {
+        width: 90%;
+    }
+
+        .agregar-editarArea hr {
+            width: 90%;
+            margin: 0px auto;
+        }
+
+        .agregar-editarArea form {
+            width: 90%;
+            margin: 10px auto;
+        }
+
+            .agregar-editarArea form input {
+                width: calc(100% - 10px);
+                margin: 0px;
+                margin-bottom: 10px;
+            }
+
+                .agregar-editarArea form input:nth-child(2n) {
+                    width: 90px;
+                }
+
+            .agregar-editarArea form a {
+                width: 90px;
+            }
+
+    .errorMessage {
+        font-size: 12px;
+    }
+
+    /* Read Areas de conocimiento */
+    .buscar-agregarArea form {
+        width: 100%;
+    }
+
+        .buscar-agregarArea form input {
+            width: 130px;
+        }
+
+        .buscar-agregarArea form button {
+            width: 80px;
+        }
+
+    .buscar-agregarArea a {
+        font-size: 14px;
+        margin: 15px 0px;
+    }
+
+    .areas ul li {
+        min-height: 20px;
+    }
+
+        .areas ul li .nombreArea {
+            width: 75%;
+            line-height: 20px;
+        }
+
+        .areas ul li a img {
+            width: 15px;
+            height: 15px;
+            margin: 2.5px;
+        }
+
+    /* Delete Areas de conocimiento */
+    .eliminarArea {
+        width: 90%;
+    }
+
+
+    /* ------------------------------------------------ CARRERAS ------------------------------------------------ */
+    /* Read Carreras */
+    .tablaCarreras-header {
+        font-size: 10px;
+    }
+
+    .tablaCarreras-row {
+        height: auto;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .tablaCarreras .col-1 {
+        flex-basis: 20%;
+    }
+
+    .tablaCarreras .col-2 {
+        flex-basis: 60%;
+        padding-right: 5px;
+    }
+
+    .tablaCarreras .col-3 {
+        flex-basis: 20%;
+    }
+
+        .tablaCarreras .col-3 a img {
+            width: 15px;
+            height: 15px;
+            margin: 2.5px;
+        }
+
+    /* Create - Update Carreras */
+    .agregar-editarCarrera {
+        width: 90%;
+    }
+
+        .agregar-editarCarrera form input {
+            width: 90%;
+        }
+
+    /* Delete Carreras */
+    .eliminarCarrera {
+        width: 90%;
+    }
+
+
+    /* -------------------------------------------------- ROLES -------------------------------------------------- */
+    /* Read Roles */
+    .roles {
+        width: 90%;
+    }
+
+    .listaRoles {
+        width: 100%;
+    }
+
+        .listaRoles ul li .nombreRol {
+            width: 80%;
+            line-height: 20px;
+        }
+
+        .listaRoles ul li a img {
+            width: 15px;
+            height: 15px;
+            margin: 7.5px 3px;
+        }
+
+    /* Create - Update Roles */
+    .agregar-editarRol {
+        width: 88%;
+    }
+
+        .agregar-editarRol form input {
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+            .agregar-editarRol form input:nth-child(2n) {
+                margin-right: 8px;
+            }
+
+    /* Delete Roles */
+    .eliminarRol {
+        width: 88%;
+    }
+
+
+    /* ------------------------------------------ TIPOS DE INVESTIGACION ------------------------------------------ */
+    /* Read Tipos de investigación */
+    .tiposInvestigacion {
+        width: 90%;
+    }
+
+        .tiposInvestigacion > a {
+            font-size: 13px;
+        }
+
+    .listaTiposInvestigaciones {
+        width: 95%;
+    }
+
+        .listaTiposInvestigaciones ul li .nombreTipoInvestigacion {
+            width: 80%;
+            line-height: 20px;
+        }
+
+        .listaTiposInvestigaciones ul li a img {
+            width: 15px;
+            height: 15px;
+            margin: 7.5px 3px;
+        }
+
+    /* Create - Update Tipos de investigación */
+    .agregar-editarTipoInv {
+        width: 88%;
+    }
+
+        .agregar-editarTipoInv form input {
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+            .agregar-editarTipoInv form input:nth-child(2n) {
+                margin-right: 8px;
+            }
+
+    /* Delete Tipos de investigación */
+    .eliminarTipoInv {
+        width: 85%;
+    }
+}
+
+
+@media (min-width:321px) and (max-width:480px) {
+    .encabezado {
+        height: 90px;
+    }
+
+        .encabezado a img {
+            width: 80px;
+            height: 80px;
+            margin: 5px 15px;
+        }
+
+        .encabezado h1 {
+            height: 40px;
+            font-size: 17px;
+            line-height: 17px;
+            padding: 10px 0px;
+        }
+
+        .encabezado h2 {
+            height: 30px;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+
+    /* ------------------------------------------ AREAS DE CONOCIMIENTO ------------------------------------------ */
+    /* Create - Update Areas de conocimiento */
+    .agregar-editarArea {
+        width: 90%;
+    }
+
+        .agregar-editarArea hr {
+            width: 90%;
+            margin: 0px auto;
+        }
+
+        .agregar-editarArea form {
+            width: 90%;
+            margin: 10px auto;
+        }
+
+            .agregar-editarArea form input {
+                width: calc(100% - 10px);
+                margin: 0px;
+                margin-bottom: 10px;
+            }
+
+                .agregar-editarArea form input:nth-child(2n) {
+                    width: 90px;
+                }
+
+            .agregar-editarArea form a {
+                width: 90px;
+            }
+
+    .errorMessage {
+        font-size: 12px;
+    }
+
+    /* Read Areas de conocimiento */
+    .buscar-agregarArea form {
+        width: 100%;
+    }
+
+        .buscar-agregarArea form input {
+            width: 200px;
+        }
+
+        .buscar-agregarArea form button {
+            width: 80px;
+        }
+
+    .buscar-agregarArea a {
+        margin: 15px 0px;
+    }
+
+    .areas ul li {
+        min-height: 20px;
+    }
+
+        .areas ul li .nombreArea {
+            width: 85%;
+            line-height: 20px;
+        }
+
+        .areas ul li a img {
+            width: 15px;
+            height: 15px;
+            margin: 2.5px;
+        }
+
+    /* Delete Areas de conocimiento */
+    .eliminarArea {
+        width: 90%;
+    }
+
+
+    /* ------------------------------------------------ CARRERAS ------------------------------------------------ */
+    /* Read Carreras */
+    .tablaCarreras-header {
+        font-size: 12px;
+    }
+
+    .tablaCarreras-row {
+        height: auto;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .tablaCarreras .col-1 {
+        flex-basis: 20%;
+    }
+
+    .tablaCarreras .col-2 {
+        flex-basis: 60%;
+        padding: 0px 5px;
+    }
+
+    .tablaCarreras .col-3 {
+        flex-basis: 20%;
+    }
+
+        .tablaCarreras .col-3 a img {
+            width: 15px;
+            height: 15px;
+            margin: 2.5px;
+        }
+
+    /* Create - Update Carreras */
+    .agregar-editarCarrera {
+        width: 90%;
+    }
+
+        .agregar-editarCarrera form input {
+            width: 90%;
+            margin: 0px 4.5%;
+            margin-bottom: 10px;
+        }
+
+    /* Delete Carreras */
+    .eliminarCarrera {
+        width: 85%;
+    }
+
+
+    /* -------------------------------------------------- ROLES -------------------------------------------------- */
+    /* Read Roles */
+    .roles {
+        width: 85%;
+    }
+
+    .listaRoles {
+        width: 100%;
+    }
+
+        .listaRoles ul li .nombreRol {
+            width: 80%;
+            line-height: 20px;
+        }
+
+        .listaRoles ul li a img {
+            width: 15px;
+            height: 15px;
+            margin: 7.5px 3px;
+        }
+
+    /* Create - Update Roles */
+    .agregar-editarRol {
+        width: 88%;
+    }
+
+        .agregar-editarRol form input {
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+            .agregar-editarRol form input:nth-child(2n) {
+                margin-right: 8px;
+            }
+
+    /* Delete Roles */
+    .eliminarRol {
+        width: 83%;
+    }
+
+
+    /* ------------------------------------------ TIPOS DE INVESTIGACION ------------------------------------------ */
+    /* Read Tipos de investigación */
+    .tiposInvestigacion {
+        width: 90%;
+    }
+
+        .tiposInvestigacion > a {
+            font-size: 13px;
+        }
+
+    .listaTiposInvestigaciones {
+        width: 95%;
+    }
+
+        .listaTiposInvestigaciones ul li .nombreTipoInvestigacion {
+            width: 80%;
+            line-height: 20px;
+        }
+
+        .listaTiposInvestigaciones ul li a img {
+            width: 15px;
+            height: 15px;
+            margin: 7.5px 3px;
+        }
+
+    /* Create - Update Tipos de investigación */
+    .agregar-editarTipoInv {
+        width: 88%;
+    }
+
+        .agregar-editarTipoInv form input {
+            width: 93%;
+            margin-bottom: 10px;
+        }
+
+    /* Delete Tipos de investigación */
+    .eliminarTipoInv {
+        width: 82%;
+    }
+}
+
+
+@media (min-width:481px) and (max-width:768px) {
+    .encabezado {
+        height: 90px;
+    }
+
+        .encabezado a img {
+            width: 80px;
+            height: 80px;
+            margin: 5px 15px;
+        }
+
+        .encabezado h1 {
+            height: 40px;
+            font-size: 21px;
+            line-height: 20px;
+            padding: 10px 0px;
+        }
+
+        .encabezado h2 {
+            height: 30px;
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+
+    /* ------------------------------------------ AREAS DE CONOCIMIENTO ------------------------------------------ */
+    /* Create - Update Areas de conocimiento */
+    .agregar-editarArea {
+        width: 90%;
+    }
+
+        .agregar-editarArea hr {
+            width: 90%;
+            margin: 0px auto;
+        }
+
+        .agregar-editarArea form {
+            width: 90%;
+            margin: 10px auto;
+        }
+
+            .agregar-editarArea form input {
+                width: calc(100% - 10px);
+                margin: 0px;
+                margin-bottom: 10px;
+            }
+
+                .agregar-editarArea form input:nth-child(2n) {
+                    width: 90px;
+                }
+
+            .agregar-editarArea form a {
+                width: 90px;
+            }
+
+    .errorMessage {
+        font-size: 13px;
+    }
+
+    /* Read Areas de conocimiento */
+    .buscar-agregarArea form {
+        width: 80%;
+    }
+
+        .buscar-agregarArea form input {
+            width: 200px;
+        }
+
+        .buscar-agregarArea form button {
+            width: 90px;
+        }
+
+    .buscar-agregarArea a {
+        margin: 15px 0px;
+    }
+
+    .areas ul li .nombreArea {
+        width: 80%;
+        line-height: 30px;
+    }
+
+
+    /* ------------------------------------------------ CARRERAS ------------------------------------------------ */
+    /* Read Carreras */
+    .tablaCarreras-row {
+        height: auto;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .tablaCarreras .col-1 {
+        flex-basis: 15%;
+    }
+
+    .tablaCarreras .col-2 {
+        flex-basis: 70%;
+        padding: 0px 5px;
+    }
+
+    .tablaCarreras .col-3 {
+        flex-basis: 15%;
+    }
+
+        .tablaCarreras .col-3 a img {
+            width: 15px;
+            height: 15px;
+            margin: 2.5px;
+        }
+
+    /* Create - Update Carreras */
+    .agregar-editarCarrera {
+        width: 90%;
+    }
+
+        .agregar-editarCarrera form input {
+            width: 90%;
+            margin: 0px 4.5%;
+            margin-bottom: 10px;
+        }
+
+    /* Delete Carreras */
+    .eliminarCarrera {
+        width: 60%;
+    }
+
+
+    /* -------------------------------------------------- ROLES -------------------------------------------------- */
+    /* Read Roles */
+    .roles {
+        width: 85%;
+    }
+
+    .listaRoles {
+        width: 95%;
+    }
+
+        .listaRoles ul li .nombreRol {
+            width: 80%;
+        }
+
+    /* Create - Update Roles */
+    .agregar-editarRol {
+        width: 80%;
+    }
+
+        .agregar-editarRol form input:nth-child(2n) {
+            margin-right: 5px;
+        }
+
+    /* Delete Roles */
+    .eliminarRol {
+        width: 60%;
+    }
+
+
+    /* ------------------------------------------ TIPOS DE INVESTIGACION ------------------------------------------ */
+    /* Read Tipos de investigación */
+    .tiposInvestigacion {
+        width: 88%;
+    }
+
+        .tiposInvestigacion > a {
+            font-size: 14px;
+        }
+
+    .listaTiposInvestigaciones ul li .nombreTipoInvestigacion {
+        width: 80%;
+        line-height: 20px;
+    }
+
+    /* Create - Update Tipos de investigación */
+    .agregar-editarTipoInv {
+        width: 80%;
+    }
+
+    /* Delete Tipos de investigación */
+    .eliminarTipoInv {
+        width: 60%;
+    }
+}
+
+
+@media (min-width:769px) and (max-width:1024px) {
+    .encabezado h1 {
+        font-size: 25px;
+        line-height: 25px;
+        padding: 10px 0px;
+    }
+
+    .encabezado h2 {
+        height: 30px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+
+    /* ------------------------------------------ AREAS DE CONOCIMIENTO ------------------------------------------ */
+    /* Create - Update Areas de conocimiento */
+    .agregar-editarArea {
+        width: 90%;
+    }
+
+        .agregar-editarArea hr {
+            width: 90%;
+            margin: 0px auto;
+        }
+
+        .agregar-editarArea form {
+            width: 90%;
+            margin: 10px auto;
+        }
+
+            .agregar-editarArea form input {
+                width: calc(100% - 10px);
+                margin: 0px;
+                margin-bottom: 10px;
+            }
+
+    .errorMessage {
+        font-size: 13px;
+    }
+
+    /* Read Areas de conocimiento */
+    .buscar-agregarArea form input {
+        width: 200px;
+    }
+
+    .buscar-agregarArea form button {
+        width: 90px;
+    }
+
+    .buscar-agregarArea a {
+        margin: 0px;
+    }
+
+    .areas ul li .nombreArea {
+        width: 85%;
+    }
+
+
+    /* ------------------------------------------------ CARRERAS ------------------------------------------------ */
+    /* Read Carreras */
+    .tablaCarreras-row {
+        height: auto;
+    }
+
+    .tablaCarreras .col-1 {
+        flex-basis: 10%;
+    }
+
+    .tablaCarreras .col-2 {
+        flex-basis: 80%;
+        padding: 0px 5px;
+    }
+
+    .tablaCarreras .col-3 {
+        flex-basis: 10%;
+    }
+
+        .tablaCarreras .col-3 a img {
+            width: 20px;
+            height: 20px;
+            margin: 2.5px;
+        }
+
+    /* Create - Update Carreras */
+    .agregar-editarCarrera {
+        width: 80%;
+    }
+
+        .agregar-editarCarrera form input {
+            width: 90%;
+            margin: 0px 4.5%;
+            margin-bottom: 10px;
+        }
+
+    /* Delete Carreras */
+    .eliminarCarrera {
+        width: 40%;
+    }
+
+
+    /* -------------------------------------------------- ROLES -------------------------------------------------- */
+    /* Read Roles */
+    .listaRoles {
+        width: 95%;
+    }
+
+        .listaRoles ul li .nombreRol {
+            width: 85%;
+        }
+
+    /* Create - Update Roles */
+    .agregar-editarRol {
+        width: 70%;
+    }
+
+    /* Delete Roles */
+    .eliminarRol {
+        width: 45%;
+    }
+
+
+    /* ------------------------------------------ TIPOS DE INVESTIGACION ------------------------------------------ */
+    /* Read Tipos de investigación */
+    .tiposInvestigacion {
+        width: 85%;
+    }
+
+    .listaTiposInvestigaciones ul li .nombreTipoInvestigacion {
+        width: 85%;
+    }
+
+    /* Create - Update Read Tipos de investigación */
+    .agregar-editarTipoInv {
+        width: 68%;
+    }
+
+    /* Delete Read Tipos de investigación */
+    .eliminarTipoInv {
+        width: 45%;
+    }
+}
+
+
+@media (min-width:1025px) and (max-width:1200px) {
+    .encabezado h1 {
+        font-size: 28px;
+        line-height: 25px;
+        padding: 10px 0px;
+    }
+
+    .encabezado h2 {
+        height: 30px;
+        line-height: 10px;
+    }
+
+
+    /* ------------------------------------------ AREAS DE CONOCIMIENTO ------------------------------------------ */
+    /* Create - Update Areas de conocimiento */
+    .agregar-editarArea {
+        width: 80%;
+    }
+
+        .agregar-editarArea hr {
+            width: 90%;
+            margin: 0px auto;
+        }
+
+        .agregar-editarArea form {
+            width: 90%;
+            margin: 10px auto;
+        }
+
+            .agregar-editarArea form input {
+                width: calc(100% - 10px);
+                margin: 0px;
+                margin-bottom: 10px;
+            }
+
+    /* Read Areas de conocimiento */
+    .buscar-agregarArea form input {
+        width: 300px;
+    }
+
+    .buscar-agregarArea form button {
+        width: 90px;
+    }
+
+    .buscar-agregarArea a {
+        margin: 0px;
+    }
+
+
+    /* ------------------------------------------------ CARRERAS ------------------------------------------------ */
+    /* Create - Update Carreras */
+    .agregar-editarCarrera {
+        width: 60%;
+    }
+
+        .agregar-editarCarrera form input {
+            width: 90%;
+            margin: 0px 5%;
+            margin-bottom: 10px;
+        }
+
+    /* Delete Carreras */
+    .eliminarCarrera {
+        width: 35%;
+    }
+
+
+    /* -------------------------------------------------- ROLES -------------------------------------------------- */
+    /* Create - Update Roles */
+    .agregar-editarRol {
+        width: 55%;
+    }
+
+    /* Delete Roles */
+    .eliminarRol {
+        width: 40%;
+    }
+
+
+    /* ------------------------------------------ TIPOS DE INVESTIGACION ------------------------------------------ */
+    /* Create - Update Tipos de investigación */
+    .agregar-editarTipoInv {
+        width: 55%;
+    }
+
+    /* Delete Tipos de investigación */
+    .eliminarTipoInv {
+        width: 38%;
+    }
+}

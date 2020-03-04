@@ -1,0 +1,38 @@
+﻿@model IEnumerable<aspGestProy.Models.Area>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+    int x = 1;
+}
+
+<div class="areasConocimiento">
+    <h3>Áreas de Conocimiento</h3>
+    <div class="buscar-agregarArea">
+        @*<form action="">
+            <input type="text" placeholder="Buscar aquí">
+            <button type="submit">
+                <img src="~/files/images/search.png" alt="Buscar">
+                <span>Buscar</span>
+            </button>
+        </form>*@
+        <a href="~/Administrador/Area/Agregar">
+            <img src="~/files/images/plus.png" alt="Agregar">Agregar Área de conocimiento
+        </a>
+    </div>
+    <div class="areas">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <span class="nombreArea">@item.SectorEstrategico</span>
+                    <a href="~/Administrador/Area/Eliminar/@item.IdArea">
+                        <img src="~/files/images/delete.png" alt="Eliminar">
+                    </a>
+                    <a href="~/Administrador/Area/Editar/@item.IdArea">
+                        <img src="~/files/images/edit.png" alt="Editar">
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿@model aspGestProy.ViewModels.AreaViewModel
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "_LayoutAdmin";
+}
+
+<form action="~/Administrador/Area/Eliminar" method="post">
+    <div class="eliminarArea">
+        <input type="hidden" asp-for="IdArea" />
+        <p>
+            ¿Desea eliminar el Área de Conocimiento
+            <strong>@Model.SectorEstrategico</strong>?
+        </p>
+        <input type="submit" value="Eliminar" />
+        <a href="~/Administrador/Area">Cancelar</a>
+    </div>
+</form>

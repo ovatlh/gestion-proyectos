@@ -1,0 +1,55 @@
+﻿@model IEnumerable<aspGestProy.Models.Tipoinvestigacion>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+@*<div class="areasConocimiento">
+        <h3>Tipos de Investigación</h3>
+        <div class="buscar-agregarArea">
+            <a href="~/Administrador/Tipoinvestigacion/Agregar">
+                <img src="~/files/images/plus.png" alt="Agregar">Agregar un tipo de investigación
+            </a>
+        </div>
+        <div class="areas">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <span class="nombreArea">@item.Nombre</span>
+                        <a href="~/Administrador/Tipoinvestigacion/Eliminar/@item.IdTipoInvestigacion">
+                            <img src="~/files/images/delete.png" alt="Eliminar">
+                        </a>
+                        <a href="~/Administrador/Tipoinvestigacion/Editar/@item.IdTipoInvestigacion">
+                            <img src="~/files/images/edit.png" alt="Editar">
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>*@
+
+<div class="tiposInvestigacion">
+    <h3>Tipos de investigación</h3>
+    <a href="~/Administrador/Tipoinvestigacion/Agregar">
+        <img src="~/files/images/plus.png" alt="Agregar">Agregar Tipo de Investigacion
+    </a>
+
+    <div class="listaTiposInvestigaciones">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <span class="nombreTipoInvestigacion">@item.Nombre</span>
+
+                    <a href="~/Administrador/Tipoinvestigacion/Eliminar/@item.IdTipoInvestigacion">
+                        <img src="~/files/images/delete.png" alt="Eliminar">
+                    </a>
+                    <a href="~/Administrador/Tipoinvestigacion/Editar/@item.IdTipoInvestigacion">
+                        <img src="~/files/images/edit.png" alt="Editar">
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿@model aspGestProy.ViewModels.TipoInvestigacionViewModel
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "_LayoutAdmin";
+}
+
+@*<form action="~/Administrador/Tipoinvestigacion/Eliminar" method="post">
+        <div class="eliminarArea">
+            <input type="hidden" asp-for="IdTipoInvestigacion" />
+            <p>
+                ¿Desea eliminar el tipo de investigación
+                <strong>@Model.Nombre</strong>?
+            </p>
+            <input type="submit" value="Eliminar" />
+            <a href="~/Administrador/Tipoinvestigacion">Cancelar</a>
+        </div>
+    </form>*@
+
+
+    <form action="~/Administrador/Tipoinvestigacion/Eliminar" method="post">
+        <div class="eliminarTipoInv">
+            <p>
+                ¿Desea eliminar el Tipo de Investigación
+                <strong>@Model.Nombre</strong>?
+            </p>
+            <input type="submit" value="Eliminar"/>
+            <a href="~/Administrador/Tipoinvestigacion">Cancelar</a>
+        </div>
+    </form>

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<aspGestProy.Models.Rol>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+@*<div class="areasConocimiento">
+        <h3>Roles</h3>
+        <div class="buscar-agregarArea">
+
+            <a href="~/Administrador/Rol/Agregar">
+                <img src="~/files/images/plus.png" alt="Agregar">Agregar Rol
+            </a>
+        </div>
+        <div class="areas">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <span class="nombreArea">@item.Nombre</span>
+                        <a href="~/Administrador/Rol/Eliminar/@item.IdRol">
+                            <img src="~/files/images/delete.png" alt="Eliminar">
+                        </a>
+                        <a href="~/Administrador/Rol/Editar/@item.IdRol">
+                            <img src="~/files/images/edit.png" alt="Editar">
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>*@
+
+<div class="roles">
+    <h3>Roles de participación</h3>
+    <a href="~/Administrador/Rol/Agregar">
+        <img src="~/files/images/plus.png" alt="Agregar">Agregar rol
+    </a>
+
+    <div class="listaRoles">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <span class="nombreRol">@item.Nombre</span>
+                    <a href="~/Administrador/Rol/Eliminar/@item.IdRol">
+                        <img src="~/files/images/delete.png" alt="Eliminar">
+                    </a>
+                    <a href="~/Administrador/Rol/Editar/@item.IdRol">
+                        <img src="~/files/images/edit.png" alt="Editar">
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

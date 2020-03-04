@@ -1,0 +1,31 @@
+﻿@model IEnumerable<aspGestProy.Models.Categoria>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+    <div class="areasConocimiento">
+        <h3>Categorías</h3>
+        <div class="buscar-agregarArea">
+            <a href="~/Administrador/Categoria/Agregar">
+                <img src="~/files/images/plus.png" alt="Agregar">Agregar una categoría
+            </a>
+        </div>
+        <div class="areas">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <span class="nombreArea">@item.Nombre</span>
+                        <a href="~/Administrador/Categoria/Eliminar/@item.IdCategoria">
+                            <img src="~/files/images/delete.png" alt="Eliminar">
+                        </a>
+                        <a href="~/Administrador/Categoria/Editar/@item.IdCategoria">
+                            <img src="~/files/images/edit.png" alt="Editar">
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+

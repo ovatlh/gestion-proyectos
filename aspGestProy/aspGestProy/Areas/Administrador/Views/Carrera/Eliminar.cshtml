@@ -1,0 +1,17 @@
+﻿@model aspGestProy.ViewModels.CarreraViewModel
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "_LayoutAdmin";
+}
+
+<form action="~/Administrador/Carrera/Eliminar" method="post">
+    <div class="eliminarCarrera">
+        <p>
+            ¿Desea eliminar la Carrera
+            <strong>@Model.Clave @Model.Nombre</strong>?
+        </p>
+        <input type="submit" value="Eliminar" />
+        <a href="~/Administrador/Carrera">Cancelar</a>
+        <input type="hidden" asp-for="IdCarrera" />
+    </div>
+</form>

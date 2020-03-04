@@ -1,0 +1,39 @@
+﻿@model aspGestProy.ViewModels.TipoInvestigacionViewModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "_LayoutAdmin";
+}
+
+@*<div class="agregar-editarArea">
+        <h3>Edite el tipo de investigación</h3>
+        <hr>
+        <form action="~/Administrador/Tipoinvestigacion/Editar" method="post">
+            <input type="text" placeholder="Tipo de investigación" asp-for="Nombre">
+            <input type="submit" value="Guardar">
+            <a href="~/Administrador/Tipoinvestigacion">Cancelar</a>
+
+            <input type="hidden" asp-for="IdTipoInvestigacion" />
+        </form>
+        <span class="errorMessage">
+            @Html.ValidationSummary()
+        </span>
+    </div>*@
+
+
+
+
+<div class="agregar-editarTipoInv">
+    <h3>Edite el Tipo de investigación</h3>
+    <hr>
+    <form action="~/Administrador/Tipoinvestigacion/Editar" method="post">
+        <input type="text" placeholder="Nombre del tipo de investigación" asp-for="Nombre">
+        <input type="submit" value="Guardar">
+        <a href="~/Administrador/Tipoinvestigacion">Cancelar</a>
+
+
+        <input type="hidden" asp-for="IdTipoInvestigacion" />
+    </form>
+    <span class="errorMessage">
+        @Html.ValidationSummary()
+    </span>
+</div>

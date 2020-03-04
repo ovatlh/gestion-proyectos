@@ -1,0 +1,32 @@
+﻿@model aspGestProy.ViewModels.RolViewModel
+@{
+    ViewData["Title"] = "Agregar";
+    Layout = "_LayoutAdmin";
+}
+
+@*<div class="agregar-editarArea">
+        <h3>Agregue un Rol</h3>
+        <hr>
+        <form action="~/Administrador/Rol/Agregar" method="post">
+            <input type="text" placeholder="Rol del alumno" asp-for="Nombre">
+            <input type="submit" value="Agregar">
+            <a href="~/Administrador/Rol">Cancelar</a>
+        </form>
+        <span class="errorMessage">
+            @Html.ValidationSummary()
+        </span>
+    </div>*@
+
+
+<div class="agregar-editarRol">
+    <h3>Agregue un Rol de participante</h3>
+    <hr>
+    <form action="~/Administrador/Rol/Agregar" method="post">
+        <input type="text" placeholder="Nombre del rol" asp-for="Nombre">
+        <input type="submit" value="Agregar">
+        <a href="~/Administrador/Rol">Cancelar</a>
+    </form>
+    <span class="errorMessage">
+        @Html.ValidationSummary()
+    </span>
+</div>

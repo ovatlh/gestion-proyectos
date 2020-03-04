@@ -1,0 +1,30 @@
+﻿@model aspGestProy.ViewModels.RolViewModel
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "_LayoutAdmin";
+}
+
+@*<form action="~/Administrador/Rol/Eliminar" method="post">
+        <div class="eliminarArea">
+            <p>
+                ¿Desea eliminar el Rol
+                <strong>@Model.Nombre</strong>?
+            </p>
+            <input type="submit" value="Eliminar" />
+            <a href="~/Administrador/Rol">Cancelar</a>
+        </div>
+        <input type="hidden" asp-for="IdRol" />
+    </form>*@
+
+
+<form action="~/Administrador/Rol/Eliminar" method="post">
+    <div class="eliminarRol">
+        <p>
+            ¿Desea eliminar el Rol
+            <strong>@Model.Nombre</strong>?
+        </p>
+        <input type="submit" value="Eliminar" />
+        <a href="~/Administrador/Rol">Cancelar</a>
+    </div>
+    <input type="hidden" asp-for="IdRol" />
+</form>

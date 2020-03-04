@@ -1,0 +1,19 @@
+﻿@model aspGestProy.ViewModels.CarreraViewModel
+@{
+    ViewData["Title"] = "Agregar";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="agregar-editarCarrera">
+    <h3>Agregue una Carrera</h3>
+    <hr>
+    <form action="~/Administrador/Carrera/Agregar" method="post">
+        <input type="text" placeholder="Escriba la clave de la carrera" asp-for="Clave">
+        <input type="text" placeholder="Escriba el nombre de la carrera" asp-for="Nombre">
+        <input type="submit" value="Agregar">
+        <a href="~/Administrador/Carrera">Cancelar</a>
+        <span class="errorMessage">
+            @Html.ValidationSummary()
+        </span>
+    </form>
+</div>

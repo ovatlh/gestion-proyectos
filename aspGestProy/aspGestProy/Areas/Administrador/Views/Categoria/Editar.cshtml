@@ -1,0 +1,21 @@
+﻿@model aspGestProy.ViewModels.CategoriaViewModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="agregar-editarArea">
+    <h3>Edite la categoría</h3>
+    <hr>
+    <form action="~/Administrador/Categoria/Editar" method="post">
+        <input type="text" placeholder="Categoría" asp-for="Nombre">
+        <input type="submit" value="Guardar">
+        <a href="~/Administrador/Categoria">Cancelar</a>
+
+        <input type="hidden" asp-for="IdCategoria" />
+    </form>
+    <span class="errorMessage">
+        @Html.ValidationSummary()
+    </span>
+</div>
+

@@ -1,0 +1,18 @@
+﻿@model aspGestProy.ViewModels.CategoriaViewModel
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "_LayoutAdmin";
+}
+
+<form action="~/Administrador/Categoria/Eliminar" method="post">
+    <div class="eliminarArea">
+        <input type="hidden" asp-for="IdCategoria" />
+        <p>
+            ¿Desea eliminar la categoría
+            <strong>@Model.Nombre</strong>?
+        </p>
+        <input type="submit" value="Eliminar" />
+        <a href="~/Administrador/Categoria">Cancelar</a>
+    </div>
+</form>
+
