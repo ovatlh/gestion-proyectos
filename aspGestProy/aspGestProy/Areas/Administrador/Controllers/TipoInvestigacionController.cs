@@ -61,13 +61,13 @@ namespace aspGestProy.Areas.Administrador.Controllers
                         return View(TipoInv_VM);
                     }
 
-                    Regex regexNoNumStart = new Regex(@"[0-9]$");
+                    Regex regexNoNumStart = new Regex(@"[0-9]| $");
                     bool resultadoNoNumStart = false;
                     string textoFirstChart = TipoInv_VM.Nombre.Substring(0, 1);
                     resultadoNoNumStart = regexNoNumStart.IsMatch(textoFirstChart);
                     if (resultadoNoNumStart)
                     {
-                        ModelState.AddModelError("", "No se permite iniciar con número.");
+                        ModelState.AddModelError("", "No se permite iniciar con NÚMERO o con ESPACIO.");
                         return View(TipoInv_VM);
                     }
 
@@ -114,13 +114,13 @@ namespace aspGestProy.Areas.Administrador.Controllers
                         return View(TipoInv_VM);
                     }
 
-                    Regex regexNoNumStart = new Regex(@"[0-9]$");
+                    Regex regexNoNumStart = new Regex(@"[0-9]| $");
                     bool resultadoNoNumStart = false;
                     string textoFirstChart = TipoInv_VM.Nombre.Substring(0, 1);
                     resultadoNoNumStart = regexNoNumStart.IsMatch(textoFirstChart);
                     if (resultadoNoNumStart)
                     {
-                        ModelState.AddModelError("", "No se permite iniciar con número.");
+                        ModelState.AddModelError("", "No se permite iniciar con NÚMERO o con ESPACIO.");
                         return View(TipoInv_VM);
                     }
 

@@ -32,7 +32,7 @@ namespace aspGestProy.Repositories
             Carrera carrera = new Carrera()
             {
                 Nombre = carrera_VM.Nombre,
-                Clave = carrera_VM.Clave
+                Clave = carrera_VM.Clave.ToUpper()
             };
             Insert(carrera);
         }
@@ -41,7 +41,7 @@ namespace aspGestProy.Repositories
             var carreraResult = GetById(carrera_VM.IdCarrera);
             if (carreraResult != null)
             {
-                carreraResult.Clave = carrera_VM.Clave;
+                carreraResult.Clave = carrera_VM.Clave.ToUpper();
                 carreraResult.Nombre = carrera_VM.Nombre;
                 Update(carreraResult);
             }      
