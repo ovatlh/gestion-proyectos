@@ -61,6 +61,16 @@ namespace aspGestProy.Areas.Administrador.Controllers
                         return View(TipoInv_VM);
                     }
 
+                    Regex regexNoNumStart = new Regex(@"[0-9]$");
+                    bool resultadoNoNumStart = false;
+                    string textoFirstChart = TipoInv_VM.Nombre.Substring(0, 1);
+                    resultadoNoNumStart = regexNoNumStart.IsMatch(textoFirstChart);
+                    if (resultadoNoNumStart)
+                    {
+                        ModelState.AddModelError("", "No se permite iniciar con número.");
+                        return View(TipoInv_VM);
+                    }
+
                     if (tipoinvestigacionResult == null)
                     {
                         tipoInvestigacionesRepository.InsertTipoInvestigacionVM(TipoInv_VM);
@@ -101,6 +111,16 @@ namespace aspGestProy.Areas.Administrador.Controllers
                     if (!resultado)
                     {
                         ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                        return View(TipoInv_VM);
+                    }
+
+                    Regex regexNoNumStart = new Regex(@"[0-9]$");
+                    bool resultadoNoNumStart = false;
+                    string textoFirstChart = TipoInv_VM.Nombre.Substring(0, 1);
+                    resultadoNoNumStart = regexNoNumStart.IsMatch(textoFirstChart);
+                    if (resultadoNoNumStart)
+                    {
+                        ModelState.AddModelError("", "No se permite iniciar con número.");
                         return View(TipoInv_VM);
                     }
 

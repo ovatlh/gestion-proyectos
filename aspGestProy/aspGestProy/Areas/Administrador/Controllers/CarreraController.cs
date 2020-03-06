@@ -63,6 +63,15 @@ namespace aspGestProy.Areas.Administrador.Controllers
                         ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
                         return View(carreraVM);
                     }
+                    Regex regexNoNumStart = new Regex(@"[0-9]$");
+                    bool resultadoNoNumStart = false;
+                    string textoFirstChart = carreraVM.Nombre.Substring(0, 1);
+                    resultadoNoNumStart = regexNoNumStart.IsMatch(textoFirstChart);
+                    if (resultadoNoNumStart)
+                    {
+                        ModelState.AddModelError("", "No se permite iniciar con número.");
+                        return View(carreraVM);
+                    }
 
                     if (carreraResult== null)
                     {
@@ -120,6 +129,16 @@ namespace aspGestProy.Areas.Administrador.Controllers
                     if (!resultado || !resultado2)
                     {
                         ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                        return View(carreraVM);
+                    }
+
+                    Regex regexNoNumStart = new Regex(@"[0-9]$");
+                    bool resultadoNoNumStart = false;
+                    string textoFirstChart = carreraVM.Nombre.Substring(0, 1);
+                    resultadoNoNumStart = regexNoNumStart.IsMatch(textoFirstChart);
+                    if (resultadoNoNumStart)
+                    {
+                        ModelState.AddModelError("", "No se permite iniciar con número.");
                         return View(carreraVM);
                     }
 
