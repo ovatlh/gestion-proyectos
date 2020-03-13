@@ -51,18 +51,32 @@ namespace aspGestProy.Areas.Administrador.Controllers
                     var carreraResultNombre = carreraRepository.GetCarreraByNombre(carreraVM.Nombre.ToLower());
                     var carreraResultClave = carreraRepository.GetCarreraByClave(carreraVM.Clave);
                     var carreraResult = carreraRepository.GetCarreraByClaveNombre(carreraVM.Clave, carreraVM.Nombre.ToLower());
-                    
-                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
-                    bool resultado = true;
-                    resultado = regex.IsMatch(carreraVM.Clave);
-                    bool resultado2 = true;
-                    resultado2 = regex.IsMatch(carreraVM.Nombre);
 
-                    if (!resultado || !resultado2)
+                    //Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    Regex regexClave = new Regex(@"^[a-zA-Z]+$");
+                    Regex regexNombre = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    bool resultadoClave = true;
+                    resultadoClave = regexClave.IsMatch(carreraVM.Clave);
+                    bool resultadoNombre = true;
+                    resultadoNombre = regexNombre.IsMatch(carreraVM.Nombre);
+
+                    if (!resultadoClave)
+                    {
+                        ModelState.AddModelError("", "La clave de la carrera solo acepta letras. (Máximo 2, verifique espacios)");
+                        return View(carreraVM);
+                    }
+                    if (!resultadoNombre)
                     {
                         ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
                         return View(carreraVM);
                     }
+
+                    //if (!resultadoClave || !resultadoNombre)
+                    //{
+                    //    ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                    //    return View(carreraVM);
+                    //}
+
                     Regex regexNoNumStart = new Regex(@"[0-9]| $");
                     bool resultadoNoNumStart = false;
                     string textoFirstChart = carreraVM.Nombre.Substring(0, 1);
