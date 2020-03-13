@@ -54,7 +54,7 @@ namespace aspGestProy.Areas.Administrador.Controllers
 
                     //Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
                     Regex regexClave = new Regex(@"^[a-zA-Z]+$");
-                    Regex regexNombre = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    Regex regexNombre = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s  ]+$");
                     bool resultadoClave = true;
                     resultadoClave = regexClave.IsMatch(carreraVM.Clave);
                     bool resultadoNombre = true;
@@ -67,7 +67,7 @@ namespace aspGestProy.Areas.Administrador.Controllers
                     }
                     if (!resultadoNombre)
                     {
-                        ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                        ModelState.AddModelError("", "No se aceptan números y caracteres especiales en el nombre (Solo: a-z, A-Z).");
                         return View(carreraVM);
                     }
 
@@ -134,17 +134,30 @@ namespace aspGestProy.Areas.Administrador.Controllers
                     var carreraResultClave = carreraRepository.GetCarreraByClave(carreraVM.Clave);
                     var carreraResult = carreraRepository.GetCarreraByClaveNombre(carreraVM.Clave, carreraVM.Nombre.ToLower());
 
-                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
-                    bool resultado = true;
-                    resultado = regex.IsMatch(carreraVM.Clave);
-                    bool resultado2 = true;
-                    resultado2 = regex.IsMatch(carreraVM.Nombre);
+                    //Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    Regex regexClave = new Regex(@"^[a-zA-Z]+$");
+                    Regex regexNombre = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s  ]+$");
+                    bool resultadoClave = true;
+                    resultadoClave = regexClave.IsMatch(carreraVM.Clave);
+                    bool resultadoNombre = true;
+                    resultadoNombre = regexNombre.IsMatch(carreraVM.Nombre);
 
-                    if (!resultado || !resultado2)
+                    if (!resultadoClave)
                     {
-                        ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                        ModelState.AddModelError("", "La clave de la carrera solo acepta letras. (Máximo 2, verifique espacios)");
                         return View(carreraVM);
                     }
+                    if (!resultadoNombre)
+                    {
+                        ModelState.AddModelError("", "No se aceptan números y caracteres especiales en el nombre (Solo: a-z, A-Z).");
+                        return View(carreraVM);
+                    }
+
+                    //if (!resultadoClave || !resultadoNombre)
+                    //{
+                    //    ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                    //    return View(carreraVM);
+                    //}
 
                     Regex regexNoNumStart = new Regex(@"[0-9]| $");
                     bool resultadoNoNumStart = false;

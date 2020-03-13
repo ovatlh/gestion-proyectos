@@ -51,14 +51,15 @@ namespace aspGestProy.Areas.Administrador.Controllers
                 {
                     AreasRepository areasRepository = new AreasRepository();
                     var areaResult = areasRepository.GetAreaByNombre(areaVM.SectorEstrategico.ToLower());
-                    
-                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+
+                    //Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s ]+$");
                     bool resultado = true;
                     resultado = regex.IsMatch(areaVM.SectorEstrategico);
 
                     if (!resultado)
                     {
-                        ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                        ModelState.AddModelError("", "No se aceptan números y caracteres especiales en el nombre (Solo: a-z, A-Z).");
                         return View(areaVM);
                     }
 
@@ -106,13 +107,14 @@ namespace aspGestProy.Areas.Administrador.Controllers
                     AreasRepository areasRepository = new AreasRepository();
                     var areaResult = areasRepository.GetAreaByNombre(areaVM.SectorEstrategico.ToLower());
 
-                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    //Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s ]+$");
                     bool resultado = true;
                     resultado = regex.IsMatch(areaVM.SectorEstrategico);
 
                     if (!resultado)
                     {
-                        ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                        ModelState.AddModelError("", "No se aceptan números y caracteres especiales en el nombre (Solo: a-z, A-Z).");
                         return View(areaVM);
                     }
 

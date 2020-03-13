@@ -49,13 +49,14 @@ namespace aspGestProy.Areas.Administrador.Controllers
                     CategoriasRepository categoriasRepository = new CategoriasRepository();
                     var categoriaResult = categoriasRepository.GetCategoriaByNombre(categoria_VM.Nombre.ToLower());
 
-                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    //Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s ]+$");
                     bool resultado = true;
                     resultado = regex.IsMatch(categoria_VM.Nombre);
 
                     if (!resultado)
                     {
-                        ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                        ModelState.AddModelError("", "No se aceptan números y caracteres especiales en el nombre (Solo: a-z, A-Z).");
                         return View(categoria_VM);
                     }
                     Regex regexNoNumStart = new Regex(@"[0-9]| $");
@@ -101,13 +102,14 @@ namespace aspGestProy.Areas.Administrador.Controllers
                     CategoriasRepository categoriasRepository = new CategoriasRepository();
                     var categoriaResult = categoriasRepository.GetCategoriaByNombre(categoria_VM.Nombre.ToLower());
 
-                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    //Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s 0-9 ]+$");
+                    Regex regex = new Regex(@"^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s ]+$");
                     bool resultado = true;
                     resultado = regex.IsMatch(categoria_VM.Nombre);
 
                     if (!resultado)
                     {
-                        ModelState.AddModelError("", "No se aceptan caracteres especiales (Solo: a-z, A-Z, 0-9).");
+                        ModelState.AddModelError("", "No se aceptan números y caracteres especiales en el nombre (Solo: a-z, A-Z).");
                         return View(categoria_VM);
                     }
                     Regex regexNoNumStart = new Regex(@"[0-9]| $");
