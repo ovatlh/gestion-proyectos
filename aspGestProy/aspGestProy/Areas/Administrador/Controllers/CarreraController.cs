@@ -20,7 +20,7 @@ namespace aspGestProy.Areas.Administrador.Controllers
             IEnumerable<Carrera> carrerasIEnumerable = carrerasRepository.GetAll();
             return View(carrerasIEnumerable);
         }
-        //GET
+        //GET --------------------------------------------------------------------------------------
         public IActionResult Agregar()
         {
             return View();
@@ -39,7 +39,7 @@ namespace aspGestProy.Areas.Administrador.Controllers
             var carreraResult = carrerasRepository.GetCarreraById(id);
             return View(carreraResult);
         }
-        //POST
+        //POST --------------------------------------------------------------------------------------
         [HttpPost]
         public IActionResult Agregar(CarreraViewModel carreraVM)
         {

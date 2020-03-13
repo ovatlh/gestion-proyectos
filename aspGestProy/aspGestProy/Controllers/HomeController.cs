@@ -10,7 +10,19 @@ namespace aspGestProy.Controllers
     {
         public IActionResult Index()
         {
+            //return View();
+            return RedirectToAction("Login");
+        }
+
+        public IActionResult Login()
+        {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(int id)
+        {
+            return RedirectToAction("Home", "Administrador");
         }
     }
 }

@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Inicio de Sesion";
+    Layout = "_LayoutLogin";
+}
+
+<div class="cardLogin">
+    <div class="imagen"></div>
+    <div class="login">
+        <div>
+            <h1>Gestión de Proyectos</h1>
+            <img src="~/files/images/logo.png" alt="Gestión de Proyectos Logo">
+        </div>
+        <h2>Inicio de Sesión</h2>
+        <p>Inicie sesión proporcionando su correo y contraseña.</p>
+        <form action="~/Home/Login" method="post">
+            <label>Correo electrónico</label>
+            <input type="text">
+            <label>Contraseña</label>
+            <div>
+                <input type="password" id="password">
+                <span><i class="fas fa-eye" id="mostrarPassword"></i></span>
+            </div>
+            <input type="submit" value="Entrar" class="btnEntrar">
+            <p>Correo electrónico o contraseña inválidos</p>
+
+            <input type="hidden" value="1" id="id" name="id" />
+        </form>
+
+        <p> <strong>(TEMPORAL)</strong> Metodos de inicio de sesion aun NO programados, solo presione ENTRAR para continuar <strong>(TEMPORAL)</strong></p>
+    </div>
+</div>

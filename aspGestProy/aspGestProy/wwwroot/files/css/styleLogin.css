@@ -1,0 +1,348 @@
+@font-face
+{
+    font-family: 'Roboto Bold';
+    src: url(../fonts/roboto/Roboto-Bold.ttf);
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+html
+{
+    height: 100%;
+    background-image: url(../images/fondo_login.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.cardLogin
+{
+    width: 70%;
+    height: 500px;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    margin: 70px auto;
+
+    -webkit-box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.5);
+}
+.imagen
+{
+    width: 40%;
+    height: 100%;
+    background-image: url(../images/dibujo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border-radius: 5px 0px 0px 5px;
+    float: left;
+    background-color: #042352;
+}
+.login
+{
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+.login > div
+{
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.login > div h1
+{
+    font-family: 'Roboto Bold';
+    font-size: 25px;
+    color: #011221;
+    line-height: 50px;
+    float: left;
+}
+.login > div img
+{
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+.login h2
+{
+    width: 90%;
+    font-family: 'Calibri Light';
+    font-size: 23px;
+    font-weight: lighter;
+    color: #082B49;
+    margin: 10px auto;
+}
+.login > p
+{
+    width: 90%;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    color: #33353D;
+    margin: 0px auto;
+}
+.login form
+{
+    width: 90%;
+    margin: 10px auto;
+}
+.login form label
+{
+    width: 90%;
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    font-weight: lighter;
+    color: #000000;
+    margin: 5px 5%;
+    display: block;
+}
+.login form > input
+{
+    width: calc(90% - 12px);
+    height: 30px;
+    font-family: 'Calibri Light';
+    font-size: 15px;
+    line-height: 30px;
+    color: #000000;
+    border: #8B7D6B 1px solid;
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin: 0px 5%;
+    margin-bottom: 10px;
+}
+.login form div
+{
+    width: 90%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+.login form div > input
+{
+    width: calc(90% - 12px);
+    height: 30px;
+    font-family: 'Calibri Light';
+    font-size: 15px;
+    line-height: 30px;
+    color: #000000;
+    border: #8B7D6B 1px solid;
+    border-right: 0px;
+    border-radius: 5px 0px 0px 5px;
+    padding: 0px 5px;
+}
+.login form div span
+{
+    width: 10%;
+    height: 32px;
+    border-radius: 0px 5px 5px 0px;
+    float: right;
+    background-color: #093B7A;
+}
+.login form div span i
+{
+    color: #FFFFFF;
+    line-height: 32px;
+    cursor: pointer;
+    margin: 0px 30%;
+}
+.login form .btnEntrar
+{
+    width: 40%;
+    height: 35px;
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #042352;
+    margin: 0px 30%;
+
+    transition-duration: 0.3s;
+}
+.login form .btnEntrar:hover
+{
+    transition-duration: 0.3s;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(51,51,51,0.5);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(51,51,51,0.5);
+    box-shadow: 0px 5px 8px 0px rgba(51,51,51,0.5);
+}
+.login form p
+{
+    width: 90%;
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    text-align: center;
+    color: #FF0000;
+    display: inline-block;
+    margin: 15px 5%;
+}
+
+
+/* RESPONSIVE */
+@media (max-width:320px)
+{
+    html{ background: none; }
+    .cardLogin
+    {
+        width: 90%;
+        margin: 30px auto;
+    }
+    .imagen
+    {
+        width: 0%;
+        height: 0%;
+        background: none;
+    }
+    .login
+    {
+        width: 95%;
+        height: 100%;
+        margin: 0px 2.5%;
+    }
+    .login > div h1{ font-size: 18px; }
+    .login > div img
+    {
+        width: 40px;
+        height: 40px;
+        margin: 5px 0px;
+    }
+    .login form{ width: 95%; }
+    .login form label
+    {
+        width: 95%;
+        font-size: 15px;
+        margin: 5px 2.5%;
+    }
+    .login form > input
+    {
+        width: calc(95% - 12px);
+        margin: 0px 2.5%;
+    }
+    .login form div
+    {
+        width: 95%;
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }
+    .login form div > input{ width: calc(85% - 12px); }
+    .login form div span
+    {
+        width: 15%;
+        height: 32px;
+    }
+    .login form div span i{ margin: 0px 25%; }
+    .login form .btnEntrar
+    {
+        width: 70%;
+        margin: 0px 15%;
+    }
+    .login form p
+    {
+        width: 95%;
+        margin: 15px 2.5%;
+    }
+}
+
+@media (min-width:321px) and (max-width:480px)
+{
+    html{ background: none; }
+    .cardLogin
+    {
+        width: 90%;
+        margin: 30px auto;
+    }
+    .imagen
+    {
+        width: 0%;
+        height: 0%;
+        background: none;
+    }
+    .login
+    {
+        width: 95%;
+        height: 100%;
+        margin: 0px 2.5%;
+    }
+    .login > div h1{ font-size: 18px; }
+    .login form{ width: 95%; }
+    .login form label
+    {
+        width: 95%;
+        font-size: 15px;
+        margin: 5px 2.5%;
+    }
+    .login form > input
+    {
+        width: calc(95% - 12px);
+        margin: 0px 2.5%;
+    }
+    .login form div
+    {
+        width: 95%;
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }
+    .login form div > input{ width: calc(85% - 12px); }
+    .login form div span
+    {
+        width: 15%;
+        height: 32px;
+    }
+    .login form div span i{ margin: 0px 32%; }
+    .login form .btnEntrar
+    {
+        width: 70%;
+        margin: 0px 15%;
+    }
+    .login form p
+    {
+        width: 95%;
+        margin: 15px 2.5%;
+    }
+}
+
+@media (min-width:481px) and (max-width:768px)
+{
+    html{ background: none; }
+    .cardLogin
+    {
+        width: 80%;
+        margin: 30px auto;
+    }
+    .imagen
+    {
+        width: 0%;
+        height: 0%;
+        background: none;
+    }
+    .login
+    {
+        width: 95%;
+        height: 100%;
+        margin: 0px 2.5%;
+    }
+    .login form div > input{ width: calc(80% - 12px); }
+    .login form div span
+    {
+        width: 20%;
+        height: 32px;
+    }
+    .login form div span i{ margin: 0px 40%; }
+}
+
+@media (min-width:769px) and (max-width:1024px)
+{
+    .cardLogin
+    {
+        width: 80%;
+        margin: 60px auto;
+    }
+    .login form div span i{ margin: 0px 23%; }
+}
